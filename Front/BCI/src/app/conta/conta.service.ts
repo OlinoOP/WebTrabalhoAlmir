@@ -1,5 +1,6 @@
 import { HttpClient } from '@angular/common/http';
 import { Injectable } from '@angular/core';
+import { Observable } from 'rxjs';
 import { Conta } from './conta';
 
 @Injectable({
@@ -14,10 +15,7 @@ export class ContaService {
   list(){
     return this.http.get<Conta>(this.API)
   }
-  depositar(){
-
-  }
-  sacar(){
-    return this.http.put<Conta>(this.API, "")
+  movimentar(movimento: Conta):Observable<Conta>{
+    return this.http.put<Conta>(this.API, movimento)
   }
 }
