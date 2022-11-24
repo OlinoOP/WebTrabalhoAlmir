@@ -13,6 +13,7 @@ export class LoginComponent implements OnInit {
   public usuario: Usuario = new Usuario()
   public autenticado: boolean = false
   public userId!: number;
+  
 
   constructor(
     private router: Router,
@@ -28,6 +29,7 @@ export class LoginComponent implements OnInit {
       this.usuario
       this.userId = this.usuario.id;
       alert("Logado com sucesso.");
+      localStorage.setItem('clienteId', ''+this.userId);
       this.autenticado = true;
       this.router.navigate(['/conta'])
     }, error => alert("Falha no login!"))

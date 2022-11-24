@@ -1,6 +1,6 @@
 export class DadosTransferencia{
-    public contaOrigem!: string
-    public contaDestino!: string
+    public contaOrigem!: number
+    public contaDestino!: number
     public valor!: number
     constructor(
         

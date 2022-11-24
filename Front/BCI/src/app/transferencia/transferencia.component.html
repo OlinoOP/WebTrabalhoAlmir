@@ -1,4 +1,4 @@
-<div class="container mt-5" style="background-color: rgb(180, 180, 180); border: 2px; border-color: black; border-style: solid;">
+<div class="container mt-5" style="background-color: rgb(180, 180, 180);">
     <div class="mt-3">
         <h1>Tranferências Recebidas</h1>
         <table class="table">
@@ -38,11 +38,41 @@
                 </tr>
                 <tr>
                     <th scope="row"></th>
-                    <td><button class="btn btn-primary">Nova Transferência</button></td>
+                    <td><button type="button" class="btn btn-primary" data-bs-toggle="modal"
+                            data-bs-target="#exampleModal" data-bs-whatever="@mdo">Nova Transferência</button></td>
                     <td></td>
                     <td></td>
                 </tr>
             </tbody>
         </table>
+    </div>
+</div>
+
+<div class="modal fade" id="exampleModal" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+    <div class="modal-dialog">
+        <div class="modal-content " style="width: 300px;">
+            <div class="modal-header">
+                <h1 class="modal-title fs-5" id="exampleModalLabel">Nova Transferência</h1>
+                <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+            </div>
+            <form (ngSubmit)="criarNovaTransferencia()">
+                <div class="modal-body ">
+
+                    <div class="mb-3">
+                        <label for="recipient-name" class="col-form-label">Numero da Conta:</label>
+                        <input name="contaDestino" type="number" [(ngModel)]="novaTranferencia.contaDestino" class="form-control" id="recipient-name">
+                    </div>
+                    <div class="mb-3">
+                        <label for="message-text" class="col-form-label">Valor em R$:</label>
+                        <input name="valor" type="number" [(ngModel)]="novaTranferencia.valor" class="form-control" id="recipient-name">
+                    </div>
+
+                </div>
+                <div class="modal-footer">
+                    <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Cancelar</button>
+                    <button type="submit" class="btn btn-primary">Transferir</button>
+                </div>
+            </form>
+        </div>
     </div>
 </div>

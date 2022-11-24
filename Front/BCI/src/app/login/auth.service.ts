@@ -13,6 +13,6 @@ export class AuthService {
 
   loginUsuario(usuario: Usuario):Observable<Usuario>{
     console.log(usuario);
-    return this.httpClient.post<Usuario>('${this.baseUrl}', usuario);
+    return this.httpClient.post<Usuario>(`${this.baseUrl}`, usuario);
   }
 }
