@@ -17,10 +17,12 @@ export class RegistroComponent implements OnInit{
    
   }
   fazerRegistro(){
+    if(!(this.registroUsuario.nome==null||this.registroUsuario.senha==null||this.registroUsuario.email==null||this.registroUsuario.telefone==null||this.registroUsuario.endereco==null)){
     console.log(this.registroUsuario)
     this.registroService.registrarUsuario(this.registroUsuario).subscribe(data=>{
       alert("Usuario registrado com sucesso!")
     },error=>alert("Falha ao registrar usuario"));
+    }
   }
 
 }

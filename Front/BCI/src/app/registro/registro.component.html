@@ -1,26 +1,26 @@
-<form (ngSubmit)="fazerRegistro()">
+<form (ngSubmit)="fazerRegistro()" class="needs-validation" novalidate> 
     <div class="container mt-5" style="width: 600px;">
         <h2>Registro</h2>
         <div class="mb-3 mt-5">
             <label  class="form-label">Usuario</label>
-            <input  name="nome" [(ngModel)]="registroUsuario.nome" type="text" class="form-control" id="usuario">
+            <input  name="nome" [(ngModel)]="registroUsuario.nome" type="text" class="form-control" id="usuario" required>
             <div id="userHelp" class="form-text">Não compartilhe seus dados com ninguém.</div>
         </div>
         <div class="mb-3">
             <label  class="form-label">Telefone</label>
-            <input  name="telefone" [(ngModel)]="registroUsuario.telefone" type="tel" class="form-control" id="telefone" pattern="[0-9]{11}">
+            <input  name="telefone" [(ngModel)]="registroUsuario.telefone" type="tel" class="form-control" id="telefone" pattern="[0-9]{11}" required>
         </div>
         <div class="mb-3">
             <label  class="form-label">Endereco</label>
-            <input  name="endereco" [(ngModel)]="registroUsuario.endereco" type="text" class="form-control" id="endereco">
+            <input  name="endereco" [(ngModel)]="registroUsuario.endereco" type="text" class="form-control" id="endereco" required>
         </div>
         <div class="mb-3">
             <label  class="form-label">E-mail</label>
-            <input  name="email" type="email" [(ngModel)]="registroUsuario.email" class="form-control" id="email">
+            <input  name="email" type="email" [(ngModel)]="registroUsuario.email" class="form-control" id="email" required>
         </div>
         <div class="mb-3">
             <label for="exampleInputPassword1" class="form-label">Senha</label>
-            <input  type="password" name="senha" [(ngModel)]="registroUsuario.senha" class="form-control" id="senha">
+            <input  type="password" name="senha" [(ngModel)]="registroUsuario.senha" class="form-control" id="senha" required>
         </div>
         <button type="submit" class="btn btn-primary">Registrar</button>
     </div>
