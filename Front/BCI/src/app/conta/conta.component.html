@@ -1,10 +1,10 @@
 <div class="container mt-5 d-flex justify-content-center">
-    <div
+    <div 
         style="width: 500px; padding: 15px; background-color: azure; border: 2px; border-color: black; border-style: solid;">
 
-        <h1>Conta - 12345</h1>
-        <h2>Bruno</h2>
-        <h3>Saldo: R$ 300,22</h3>
+        <h1 >Conta - {{conta.numeroConta}}</h1>
+        <h2>{{conta.titular}}</h2>
+        <h3>Saldo: R$ {{conta.saldo}}</h3>
         <div class="row">
             <div class="col-md-2 mt-3">
                 <button class="btn btn-primary">Sacar</button>
