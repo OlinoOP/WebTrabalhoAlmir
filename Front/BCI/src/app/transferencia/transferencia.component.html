@@ -1,0 +1,48 @@
+<div class="container mt-5" style="background-color: rgb(180, 180, 180); border: 2px; border-color: black; border-style: solid;">
+    <div class="mt-3">
+        <h1>Tranferências Recebidas</h1>
+        <table class="table">
+
+            <thead>
+                <tr>
+                    <th scope="col">Conta Origem</th>
+                    <th scope="col">Conta Destino</th>
+                    <th scope="col">Valor da Tranferência</th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr *ngFor="let transferencia of transferenciasRecebidas">
+                    <td>{{transferencia.contaOrigem}}</td>
+                    <td>{{transferencia.contaDestino}}</td>
+                    <td>R$ {{transferencia.valor}}</td>
+                </tr>
+            </tbody>
+        </table>
+    </div>
+    <div class="mt-5">
+        <h1>Tranferências Enviadas</h1>
+        <table class="table">
+
+            <thead>
+                <tr>
+                    <th scope="col">Conta Origem</th>
+                    <th scope="col">Conta Destino</th>
+                    <th scope="col">Valor da Tranferência</th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr *ngFor="let transferencia of transferenciasEnviadas">
+                    <td>{{transferencia.contaOrigem}}</td>
+                    <td>{{transferencia.contaDestino}}</td>
+                    <td>R$ {{transferencia.valor}}</td>
+                </tr>
+                <tr>
+                    <th scope="row"></th>
+                    <td><button class="btn btn-primary">Nova Transferência</button></td>
+                    <td></td>
+                    <td></td>
+                </tr>
+            </tbody>
+        </table>
+    </div>
+</div>

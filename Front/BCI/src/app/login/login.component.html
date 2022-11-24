@@ -1,0 +1,16 @@
+<form (ngSubmit)="fazerLogin()">
+    <div class="container mt-5" style="width: 600px;">
+        <h2>Login</h2>
+        <div class="mb-3 mt-5">
+            <label for="exampleInputEmail1" class="form-label">Usuario</label>
+            <input [(ngModel)]="usuario.nome" name="nome" type="text" class="form-control" id="usuario"
+                aria-describedby="emailHelp">
+            <div id="loginHelp" class="form-text">Não compartilhe seus dados com ninguém.</div>
+        </div>
+        <div class="mb-3">
+            <label for="exampleInputPassword1" class="form-label">Senha</label>
+            <input [(ngModel)]="usuario.senha" type="password" name="senha" class="form-control" id="senha">
+        </div>
+        <button type="submit" class="btn btn-primary">Login</button>
+    </div>
+</form>
