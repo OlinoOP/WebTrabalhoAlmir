@@ -4,7 +4,6 @@ import { TranferenciaService } from './transferencia.service';
 import { Transferencias } from './transferencias';
 
 
-
 var transferenciasRecebidas: DadosTransferencia[];
 var transferenciasEnviadas: DadosTransferencia[];
 
